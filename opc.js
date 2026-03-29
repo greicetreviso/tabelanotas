@@ -1,6 +1,6 @@
 // function para calcular media
-export function calcularMedia(nota1, nota2, nota3)  { //exporta a function
-    let media = (nota1 + nota2 + nota3) / 3  
+export function calcularMedia(nota1,nota2,nota3 )  { //exporta a function
+    let media = (nota1 + nota2 + nota3) / 3
     return media
 } 
 
