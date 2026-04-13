@@ -28,5 +28,39 @@ media.textContent = contamedia.toFixed(1)
 
 let veredito =parseFloat (media.textContent)
 veredito = definirStatus (veredito, filhos[5])
-
 }
+
+//iterador
+tabelinha.forEach(tr=>{
+let filhos=tr.children
+let veredito=filhos[5]
+
+if (veredito.textContent == "APROVADO") {
+   veredito.style.backgroundColor =	"#32CD32"}
+else if (veredito.textContent == "REPROVADO") {
+   veredito.style.backgroundColor ="#FF0000"}
+else {
+     veredito.style.backgroundColor ="#DCDCDC"
+}
+
+})
+
+//filtro
+let entrada = document.querySelector(".entrada")
+entrada.addEventListener('input', ()=>{
+tabelinha.forEach(tr=> { tr.viseble=true
+ let tds = tr.children
+
+     if(!tds[5].textContent.includes(entrada.value)){
+        tr.viseble = false 
+     }
+    if(tr.viseble){
+        tr.style.display ='table-row'
+    }
+    else {
+        tr.style.display = 'none'
+    }
+      })
+console.log ('...')
+})
+
